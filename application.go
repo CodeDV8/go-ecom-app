@@ -1,13 +1,11 @@
 package EComApp
 
-import (
-//    "github.com/gin-gonic/gin"
-)
+import "github.com/gin-gonic/gin"
 
 type Application struct {
-	DB    interface{}
-	Hooks []Hook
-	// Router *gin.
+	DB     interface{}
+	Hooks  []Hook
+	Router *gin.Engine
 }
 
 type Hook struct {
