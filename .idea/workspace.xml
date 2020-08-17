@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="187cdc28-5fd6-46ef-8af6-75daac5a7456" name="Default Changelist" comment="Startup">
-      <change afterPath="$PROJECT_DIR$/.idea/go-ecom-app.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application.go" beforeDir="false" afterPath="$PROJECT_DIR$/application.go" afterDir="false" />
+    <list default="true" id="187cdc28-5fd6-46ef-8af6-75daac5a7456" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,9 +48,13 @@
     <integration-enabled>true</integration-enabled>
   </component>
   <component name="WindowStateProjectService">
-    <state x="632" y="127" key="CommitChangelistDialog2" timestamp="1597691824296">
+    <state x="632" y="127" key="CommitChangelistDialog2" timestamp="1597691858040">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state x="632" y="127" key="CommitChangelistDialog2/213.1103.1440.877/137.-1027.1680.1027/0.23.1920.1057@0.23.1920.1057" timestamp="1597691824296" />
+    <state x="632" y="127" key="CommitChangelistDialog2/213.1103.1440.877/137.-1027.1680.1027/0.23.1920.1057@0.23.1920.1057" timestamp="1597691858040" />
+    <state x="638" y="291" key="Vcs.Push.Dialog.v2" timestamp="1597691869522">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="638" y="291" key="Vcs.Push.Dialog.v2/213.1103.1440.877/137.-1027.1680.1027/0.23.1920.1057@0.23.1920.1057" timestamp="1597691869522" />
   </component>
 </project>
