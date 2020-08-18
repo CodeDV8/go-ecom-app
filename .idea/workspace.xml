@@ -1,16 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="187cdc28-5fd6-46ef-8af6-75daac5a7456" name="Default Changelist" comment="">
+    <list default="true" id="187cdc28-5fd6-46ef-8af6-75daac5a7456" name="Default Changelist" comment="Startup">
+      <change afterPath="$PROJECT_DIR$/methods.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/struct.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application.go" beforeDir="false" afterPath="$PROJECT_DIR$/application.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="GOROOT" path="/usr/local/Cellar/go/1.14.3/libexec" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" path="/usr/local/Cellar/go/1.15/libexec" />
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
@@ -19,19 +30,13 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GoLibraries">
-    <option name="urls">
-      <list>
-        <option value="file://$PROJECT_DIR$/../../.." />
-      </list>
-    </option>
-  </component>
   <component name="ProjectId" id="1gEsfXckM5lPg1l7kSkwlXOpteP" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="GO_FMT" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -40,11 +45,12 @@
     <property name="configurable.Module.GOPATH.is.expanded" value="true" />
     <property name="configurable.Project.GOPATH.is.expanded" value="true" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$" />
+    <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
-    <property name="settings.editor.selected.configurable" value="com.goide.configuration.GoLibrariesConfigurableProvider" />
+    <property name="settings.editor.selected.configurable" value="go.sdk" />
   </component>
   <component name="RunManager">
     <configuration name="go build application.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
@@ -56,11 +62,6 @@
       <directory value="$PROJECT_DIR$" />
       <method v="2" />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Go Build.go build application.go" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TypeScriptGeneratedFilesManager">
@@ -70,7 +71,14 @@
     <MESSAGE value="Startup" />
     <option name="LAST_COMMIT_MESSAGE" value="Startup" />
   </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+  </component>
   <component name="WindowStateProjectService">
+    <state x="838" y="488" key="#GOROOT" timestamp="1597738462624">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="838" y="488" key="#GOROOT/213.1103.1440.877/137.-1027.1680.1027/0.23.1920.1057@0.23.1920.1057" timestamp="1597738462624" />
     <state x="502" y="213" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1597692152578">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
@@ -79,17 +87,33 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="789" y="423" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/213.1103.1440.877/137.-1027.1680.1027/0.23.1920.1057@0.23.1920.1057" timestamp="1597692292540" />
-    <state x="632" y="127" key="CommitChangelistDialog2" timestamp="1597691954832">
+    <state x="632" y="127" key="CommitChangelistDialog2" timestamp="1597766169042">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state x="632" y="127" key="CommitChangelistDialog2/213.1103.1440.877/137.-1027.1680.1027/0.23.1920.1057@0.23.1920.1057" timestamp="1597691954832" />
-    <state x="547" y="190" key="SettingsEditor" timestamp="1597692817547">
+    <state x="632" y="127" key="CommitChangelistDialog2/213.1103.1440.877/137.-1027.1680.1027/0.23.1920.1057@0.23.1920.1057" timestamp="1597766169042" />
+    <state width="1596" height="290" key="GridCell.Tab.0.bottom" timestamp="1597766476425">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state x="547" y="190" key="SettingsEditor/213.1103.1440.877/137.-1027.1680.1027/0.23.1920.1057@0.23.1920.1057" timestamp="1597692817547" />
-    <state x="638" y="291" key="Vcs.Push.Dialog.v2" timestamp="1597691962482">
+    <state width="1596" height="290" key="GridCell.Tab.0.bottom/213.1103.1440.877/137.-1027.1680.1027/0.23.1920.1057@0.23.1920.1057" timestamp="1597766476425" />
+    <state width="1596" height="290" key="GridCell.Tab.0.center" timestamp="1597766476423">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state x="638" y="291" key="Vcs.Push.Dialog.v2/213.1103.1440.877/137.-1027.1680.1027/0.23.1920.1057@0.23.1920.1057" timestamp="1597691962482" />
+    <state width="1596" height="290" key="GridCell.Tab.0.center/213.1103.1440.877/137.-1027.1680.1027/0.23.1920.1057@0.23.1920.1057" timestamp="1597766476423" />
+    <state width="1596" height="290" key="GridCell.Tab.0.left" timestamp="1597766476422">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1596" height="290" key="GridCell.Tab.0.left/213.1103.1440.877/137.-1027.1680.1027/0.23.1920.1057@0.23.1920.1057" timestamp="1597766476422" />
+    <state width="1596" height="290" key="GridCell.Tab.0.right" timestamp="1597766476424">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1596" height="290" key="GridCell.Tab.0.right/213.1103.1440.877/137.-1027.1680.1027/0.23.1920.1057@0.23.1920.1057" timestamp="1597766476424" />
+    <state x="547" y="190" key="SettingsEditor" timestamp="1597766441427">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="547" y="190" key="SettingsEditor/213.1103.1440.877/137.-1027.1680.1027/0.23.1920.1057@0.23.1920.1057" timestamp="1597766441427" />
+    <state x="638" y="291" key="Vcs.Push.Dialog.v2" timestamp="1597692870441">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="638" y="291" key="Vcs.Push.Dialog.v2/213.1103.1440.877/137.-1027.1680.1027/0.23.1920.1057@0.23.1920.1057" timestamp="1597692870441" />
   </component>
 </project>
