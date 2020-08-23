@@ -1,7 +1,6 @@
 package EComApp
 
 import (
-	EComBase "github.com/codedv8/go-ecom-base"
 	"github.com/gin-gonic/gin"
 	"plugin"
 )
@@ -14,20 +13,22 @@ type Application struct {
 	Router        *gin.Engine
 }
 
+type HookCallback func(*func(interface{}) (bool, error)) (bool, error)
+
 type Hook struct {
-	Callback EComBase.HookCallback
+	Callback func(interface{}) (bool, error)
 }
 
-func (app *Application) AddHook(name string, callback func(interface{}) (bool, error)) {
+func (app *Application) ListenToHook(name string, callback func(interface{}) (bool, error)) {
 	hook := &Hook{
 		Callback: callback,
 	}
 	app.Hooks[name] = append(app.Hooks[name], *hook)
 }
 
-func (app *Application) CallHook(name string, args *interface{}) (bool, error) {
+func (app *Application) CallHook(name string, payload interface{}) (bool, error) {
 	for _, hook := range app.Hooks[name] {
-		ok, err := hook.Callback(args)
+		ok, err := hook.Callback(payload)
 		if err != nil {
 			return ok, err
 		}
@@ -42,6 +43,7 @@ func (app *Application) CallHook(name string, args *interface{}) (bool, error) {
 // }
 
 type Module struct {
+	SysInit  func(app *Application) error
 	Init     func(app *Application) error
 	Done     func(app *Application) error
 	Plugin   *plugin.Plugin

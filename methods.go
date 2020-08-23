@@ -2,6 +2,7 @@ package EComApp
 
 import (
 	"context"
+	EComStructsAPI "github.com/codedv8/go-ecom-structs/API"
 	"github.com/gin-gonic/gin"
 	"log"
 	"net/http"
@@ -15,7 +16,7 @@ func (app *Application) Ping() string {
 	return "Pong"
 }
 
-func (app *Application) Init() {
+func (app *Application) SysInit() {
 	// Gin router
 	app.Router = gin.New()
 	app.Router.Use(gin.Logger())
@@ -27,6 +28,30 @@ func (app *Application) Init() {
 	// Load user plugins
 	app.LoadPlugins("./user/", &app.UserModules)
 
+	// Initialize all system modules
+	for _, module := range app.SystemModules {
+		module.SysInit(app)
+	}
+
+	// Initialize all user modules
+	for _, module := range app.UserModules {
+		module.SysInit(app)
+	}
+
+	app.ListenToHook("API_CALL", func(payload interface{}) (bool, error) {
+		switch v := payload.(type) {
+		case *EComStructsAPI.Root:
+			log.Printf("API_CALL in App.Init: %+v\n", v)
+			v.I = 42
+		default:
+			log.Print("Failed to detect struct")
+		}
+		return true, nil
+	})
+
+}
+
+func (app *Application) Init() {
 	// Initialize all system modules
 	for _, module := range app.SystemModules {
 		module.Init(app)

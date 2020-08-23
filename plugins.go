@@ -16,8 +16,19 @@ func (app *Application) LoadPlugins(path string, modules *[]Module) {
 			continue
 		}
 
+		// Find SysInit
+		symbol, err := p.Lookup("SysInit")
+		if err != nil {
+			continue
+		}
+
+		sysInitFunc, okSysInit := symbol.(func(app *Application) error)
+		if !okSysInit {
+			continue
+		}
+
 		// Find Init
-		symbol, err := p.Lookup("Init")
+		symbol, err = p.Lookup("Init")
 		if err != nil {
 			continue
 		}
@@ -39,6 +50,7 @@ func (app *Application) LoadPlugins(path string, modules *[]Module) {
 		}
 
 		module := &Module{
+			SysInit:  sysInitFunc,
 			Init:     initFunc,
 			Done:     doneFunc,
 			Plugin:   p,
