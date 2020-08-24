@@ -1,5 +1,7 @@
 github.com/codedv8/go-ecom-base v0.0.0-20200818212229-36465caac9e8 h1:sri+KaYZZmz8NruvHC3z3qtE3oFIU92LlQg6mgumP0g=
 github.com/codedv8/go-ecom-base v0.0.0-20200818212229-36465caac9e8/go.mod h1:OkHyUjhhaEoktvXdxJkEYz6D8wpxR+YXuPG+FxU8pyc=
+github.com/codedv8/go-ecom-structs v0.0.0-20200823195947-93ed6f542ba9 h1:gWKRDiPRi3Dstm3cy34kt3rwtd5v1nLqh4ZqqSzo454=
+github.com/codedv8/go-ecom-structs v0.0.0-20200823195947-93ed6f542ba9/go.mod h1:QVU+ph9RrBBDetnofYOhq7dANCVwv8+jp5fLAAha6L4=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=
 github.com/davecgh/go-spew v1.1.1 h1:vj9j/u1bqnvCEfJOwUhtlOARqs3+rkHYY13jYWTU97c=
 github.com/davecgh/go-spew v1.1.1/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=

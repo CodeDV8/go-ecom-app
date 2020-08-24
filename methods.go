@@ -2,6 +2,7 @@ package EComApp
 
 import (
 	"context"
+	EComStructs "github.com/codedv8/go-ecom-structs"
 	EComStructsAPI "github.com/codedv8/go-ecom-structs/API"
 	"github.com/gin-gonic/gin"
 	"log"
@@ -21,6 +22,19 @@ func (app *Application) SysInit() {
 	app.Router = gin.New()
 	app.Router.Use(gin.Logger())
 	app.Router.Use(gin.Recovery())
+
+	// Handle unhandled in router
+	app.Router.NoRoute(func(c *gin.Context) {
+		payload := &EComStructs.RouterWildcard{Context: c}
+		ok, err := app.CallHook("ROUTER_WILDCARD", payload)
+		if err != nil {
+			// We had an error
+			c.String(500, "Something went very wrong when processing the URL")
+		} else if ok != false {
+			// Since ok is true, we didn't have anyone handling this request
+			c.String(404, "Sorry, couldn't find what you're looking for")
+		}
+	})
 
 	// Load system plugins
 	app.LoadPlugins("./system/", &app.SystemModules)

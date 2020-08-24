@@ -3,9 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="187cdc28-5fd6-46ef-8af6-75daac5a7456" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/methods.go" beforeDir="false" afterPath="$PROJECT_DIR$/methods.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins.go" beforeDir="false" afterPath="$PROJECT_DIR$/plugins.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/struct.go" beforeDir="false" afterPath="$PROJECT_DIR$/struct.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,10 +84,10 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="789" y="423" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/213.1103.1440.877/137.-1027.1680.1027/0.23.1920.1057@0.23.1920.1057" timestamp="1597692292540" />
-    <state x="632" y="127" key="CommitChangelistDialog2" timestamp="1598188586281">
+    <state x="632" y="127" key="CommitChangelistDialog2" timestamp="1598214856554">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state x="632" y="127" key="CommitChangelistDialog2/213.1103.1440.877/137.-1027.1680.1027/0.23.1920.1057@0.23.1920.1057" timestamp="1598188586281" />
+    <state x="632" y="127" key="CommitChangelistDialog2/213.1103.1440.877/137.-1027.1680.1027/0.23.1920.1057@0.23.1920.1057" timestamp="1598214856554" />
     <state width="1596" height="290" key="GridCell.Tab.0.bottom" timestamp="1597766476425">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
@@ -108,10 +108,10 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="547" y="190" key="SettingsEditor/213.1103.1440.877/137.-1027.1680.1027/0.23.1920.1057@0.23.1920.1057" timestamp="1598191784874" />
-    <state x="638" y="291" key="Vcs.Push.Dialog.v2" timestamp="1597785593924">
+    <state x="638" y="291" key="Vcs.Push.Dialog.v2" timestamp="1598214876173">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
-    <state x="638" y="291" key="Vcs.Push.Dialog.v2/213.1103.1440.877/137.-1027.1680.1027/0.23.1920.1057@0.23.1920.1057" timestamp="1597785593924" />
+    <state x="638" y="291" key="Vcs.Push.Dialog.v2/213.1103.1440.877/137.-1027.1680.1027/0.23.1920.1057@0.23.1920.1057" timestamp="1598214876173" />
     <state x="657" y="472" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598188568193">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
