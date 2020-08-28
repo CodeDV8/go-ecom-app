@@ -1,6 +1,7 @@
 package EComApp
 
 import (
+	"github.com/codedv8/go-ecom-app/urihandler"
 	"github.com/gin-gonic/gin"
 	"plugin"
 )
@@ -11,6 +12,7 @@ type Application struct {
 	SystemModules []Module
 	UserModules   []Module
 	Router        *gin.Engine
+	URIHandler    *urihandler.URIHandler
 }
 
 type HookCallback func(*func(interface{}) (bool, error)) (bool, error)

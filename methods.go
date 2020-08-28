@@ -25,8 +25,21 @@ func (app *Application) SysInit() {
 
 	// Handle unhandled in router
 	app.Router.NoRoute(func(c *gin.Context) {
+		// First check if we have an URI registered
+		ok, err := app.URIHandler.HandleURI(c.Request.URL.Path, c)
+		if err != nil {
+			// We had an error
+			log.Println(err)
+			c.String(500, "Something went very wrong in the URIHandler when processing the URL")
+			return
+		} else if ok != false {
+			// Since ok is true, this request was handled by the URIHandler
+			return
+		}
+
+		// Use the hook system to check for a matching wildcard
 		payload := &EComStructs.RouterWildcard{Context: c}
-		ok, err := app.CallHook("ROUTER_WILDCARD", payload)
+		ok, err = app.CallHook("ROUTER_WILDCARD", payload)
 		if err != nil {
 			// We had an error
 			c.String(500, "Something went very wrong when processing the URL")

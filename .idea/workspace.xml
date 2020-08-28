@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="187cdc28-5fd6-46ef-8af6-75daac5a7456" name="Default Changelist" comment="" />
+    <list default="true" id="187cdc28-5fd6-46ef-8af6-75daac5a7456" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/auth.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/basicauth.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/urihandler/urihandler.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application.go" beforeDir="false" afterPath="$PROJECT_DIR$/application.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/methods.go" beforeDir="false" afterPath="$PROJECT_DIR$/methods.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/struct.go" beforeDir="false" afterPath="$PROJECT_DIR$/struct.go" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -45,6 +53,11 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="com.goide.configuration.GoProjectSettingsConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="go build application.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
@@ -112,5 +125,9 @@
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
     <state x="657" y="472" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/213.1103.1440.877/137.-1027.1680.1027/0.23.1920.1057@0.23.1920.1057" timestamp="1598188568193" />
+    <state x="93" y="278" width="1097" height="1038" key="dock-window-1" timestamp="1598630135439">
+      <screen x="0" y="23" width="1920" height="1057" />
+    </state>
+    <state x="93" y="278" width="1097" height="1038" key="dock-window-1/213.1103.1440.877/137.-1027.1680.1027/0.23.1920.1057@0.23.1920.1057" timestamp="1598630135439" />
   </component>
 </project>
