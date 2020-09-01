@@ -2,21 +2,24 @@ package EComApp
 
 import (
 	"context"
-	EComStructs "github.com/codedv8/go-ecom-structs"
-	EComStructsAPI "github.com/codedv8/go-ecom-structs/API"
-	"github.com/gin-gonic/gin"
 	"log"
 	"net/http"
 	"os"
 	"os/signal"
 	"syscall"
 	"time"
+
+	EComStructs "github.com/codedv8/go-ecom-structs"
+	EComStructsAPI "github.com/codedv8/go-ecom-structs/API"
+	"github.com/gin-gonic/gin"
 )
 
+// Ping - A plain Ping/Pong to check if there still are life on Mars
 func (app *Application) Ping() string {
 	return "Pong"
 }
 
+// SysInit - This is a form of pre-init that will warm up the system, load all plugins and make some pre-initializations
 func (app *Application) SysInit() {
 	// Gin router
 	app.Router = gin.New()
@@ -39,13 +42,15 @@ func (app *Application) SysInit() {
 
 		// Use the hook system to check for a matching wildcard
 		payload := &EComStructs.RouterWildcard{Context: c}
-		ok, err = app.CallHook("ROUTER_WILDCARD", payload)
-		if err != nil {
+		handled, next, err2 := app.CallHook("ROUTER_WILDCARD", payload)
+		if err2 != nil {
 			// We had an error
 			c.String(500, "Something went very wrong when processing the URL")
-		} else if ok != false {
-			// Since ok is true, we didn't have anyone handling this request
+		} else if handled == false {
+			// Since handled is false, we didn't have anyone handling this request
 			c.String(404, "Sorry, couldn't find what you're looking for")
+		} else if next == false {
+			// Since next is false, the chain was not finished
 		}
 	})
 
@@ -78,6 +83,7 @@ func (app *Application) SysInit() {
 
 }
 
+// Init - Here the system will initialize all its main components.
 func (app *Application) Init() {
 	// Initialize all system modules
 	for _, module := range app.SystemModules {
@@ -90,6 +96,7 @@ func (app *Application) Init() {
 	}
 }
 
+// Run - This is the main part of the system. From here everything will be run.
 func (app *Application) Run() {
 	// Get the port to use
 	PORT := os.Getenv("PORT")
@@ -128,6 +135,7 @@ func (app *Application) Run() {
 	log.Print("Server exited properly")
 }
 
+// Done - Uninitialize the system
 func (app *Application) Done() {
 	for _, module := range app.UserModules {
 		module.Done(app)
@@ -135,4 +143,5 @@ func (app *Application) Done() {
 	for _, module := range app.SystemModules {
 		module.Done(app)
 	}
+	app.DB.Client.Disconnect(context.TODO())
 }

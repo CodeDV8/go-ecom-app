@@ -2,12 +2,13 @@ package EComApp
 
 import (
 	"github.com/codedv8/go-ecom-app/urihandler"
+	EComDB "github.com/codedv8/go-ecom-db"
 	"github.com/gin-gonic/gin"
 	"plugin"
 )
 
 type Application struct {
-	DB            interface{}
+	DB            *EComDB.DBConnector
 	Hooks         map[string][]Hook
 	SystemModules []Module
 	UserModules   []Module
@@ -28,17 +29,19 @@ func (app *Application) ListenToHook(name string, callback func(interface{}) (bo
 	app.Hooks[name] = append(app.Hooks[name], *hook)
 }
 
-func (app *Application) CallHook(name string, payload interface{}) (bool, error) {
+func (app *Application) CallHook(name string, payload interface{}) (bool, bool, error) {
+	handled := false
 	for _, hook := range app.Hooks[name] {
-		ok, err := hook.Callback(payload)
+		next, err := hook.Callback(payload)
 		if err != nil {
-			return ok, err
+			return handled, next, err
 		}
-		if ok == false {
-			return false, nil
+		handled = true
+		if next == false {
+			return handled, next, err
 		}
 	}
-	return true, nil
+	return handled, true, nil
 }
 
 // type Plugin struct {

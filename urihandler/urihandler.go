@@ -22,6 +22,12 @@ func (uh *URIHandler) HandleURI(uri string, c *gin.Context) (bool, error) {
 	if err != nil {
 		return false, err
 	}
+	if node == nil {
+		return false, nil
+	}
+	if node.Data == nil {
+		return false, nil
+	}
 	call := (node.Data).(func(*gin.Context) (bool, error))
 	return call(c)
 }
