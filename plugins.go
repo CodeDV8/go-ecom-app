@@ -5,12 +5,13 @@ import (
 	"plugin"
 )
 
+// LoadPlugins - Load all plugins from the given path and add them to the supplied list of modules
 func (app *Application) LoadPlugins(path string, modules *[]Module) {
-	all_plugins, err := filepath.Glob(path + "*.so")
+	allPlugins, err := filepath.Glob(path + "*.so")
 	if err != nil {
 		panic(err)
 	}
-	for _, filename := range all_plugins {
+	for _, filename := range allPlugins {
 		p, err := plugin.Open(filename)
 		if err != nil {
 			continue

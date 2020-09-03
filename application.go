@@ -5,6 +5,7 @@ import (
 	EComDB "github.com/codedv8/go-ecom-db"
 )
 
+// NewApplication - Create a new application object
 func NewApplication() *Application {
 	app := &Application{
 		DB:         &EComDB.DBConnector{},
