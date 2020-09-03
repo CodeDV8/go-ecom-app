@@ -1,18 +1,18 @@
 package urihandler
 
 import (
-	EComBase "github.com/codedv8/go-ecom-base"
+	ecombase "github.com/codedv8/go-ecom-base"
 	"github.com/gin-gonic/gin"
 )
 
 // URIHandler - Struct managing uri's registered to the system
 type URIHandler struct {
-	URIList *EComBase.LinkedTree
+	URIList *ecombase.LinkedTree
 }
 
 // Init - Initialize the URIHandler
 func (uh *URIHandler) Init() {
-	uh.URIList = &EComBase.LinkedTree{}
+	uh.URIList = &ecombase.LinkedTree{}
 }
 
 // AddURI - Add a new uri and a handler for it

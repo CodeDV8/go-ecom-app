@@ -1,9 +1,10 @@
-package EComApp
+package ecomapp
 
 import (
 	"encoding/base64"
-	"github.com/gin-gonic/gin"
 	"strings"
+
+	"github.com/gin-gonic/gin"
 )
 
 type BasicAuth struct {

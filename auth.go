@@ -1,4 +1,4 @@
-package EComApp
+package ecomapp
 
 // UseBasicAuth - Middleware registratio function for using basic authentication
 func (app *Application) UseBasicAuth(contextName string) *BasicAuth {

@@ -1,4 +1,4 @@
-package EComApp
+package ecomapp
 
 import (
 	"context"
@@ -9,8 +9,8 @@ import (
 	"syscall"
 	"time"
 
-	EComStructs "github.com/codedv8/go-ecom-structs"
-	EComStructsAPI "github.com/codedv8/go-ecom-structs/API"
+	ecomstructs "github.com/codedv8/go-ecom-structs"
+	ecomstructsapi "github.com/codedv8/go-ecom-structs/API"
 	"github.com/gin-gonic/gin"
 )
 
@@ -41,7 +41,7 @@ func (app *Application) SysInit() {
 		}
 
 		// Use the hook system to check for a matching wildcard
-		payload := &EComStructs.RouterWildcard{Context: c}
+		payload := &ecomstructs.RouterWildcard{Context: c}
 		handled, next, err2 := app.CallHook("ROUTER_WILDCARD", payload)
 		if err2 != nil {
 			// We had an error
@@ -72,7 +72,7 @@ func (app *Application) SysInit() {
 
 	app.ListenToHook("API_CALL", func(payload interface{}) (bool, error) {
 		switch v := payload.(type) {
-		case *EComStructsAPI.Root:
+		case *ecomstructsapi.Root:
 			log.Printf("API_CALL in App.Init: %+v\n", v)
 			v.I = 42
 		default:

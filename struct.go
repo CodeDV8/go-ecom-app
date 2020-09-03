@@ -1,16 +1,16 @@
-package EComApp
+package ecomapp
 
 import (
 	"plugin"
 
 	"github.com/codedv8/go-ecom-app/urihandler"
-	EComDB "github.com/codedv8/go-ecom-db"
+	ecomdb "github.com/codedv8/go-ecom-db"
 	"github.com/gin-gonic/gin"
 )
 
 // Application - Struct that defines the application
 type Application struct {
-	DB            *EComDB.DBConnector
+	DB            *ecomdb.DBConnector
 	Hooks         map[string][]Hook
 	SystemModules []Module
 	UserModules   []Module

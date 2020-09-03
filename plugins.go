@@ -1,4 +1,4 @@
-package EComApp
+package ecomapp
 
 import (
 	"path/filepath"
